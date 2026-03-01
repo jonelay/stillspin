@@ -44,12 +44,12 @@ For 7+ Gyr, five planets orbited in a stable Laplace chain with Bipolaris tidall
 
 From the parameter sweeps so far:
 
-- **Flip-flop behavior is real but narrow**: It only shows up in a ~500 μAU-wide band of orbital distance for a given tidal Q. Outside that band, the planet either stays permanently locked or spins freely.
-- **Mean motion drives the transitions**: Perturbations to the orbital mean motion n(t) from neighboring planets matter more than eccentricity variations for triggering spin-state changes.
-- **Tidal Q has sharp thresholds**: There's a bifurcation where a small change in Q flips the system from stable lock to chaotic flip-flopping.
-- **The antistellar lock dominates**: TL_Pi (γ=π) captures ~47% of the time vs ~9% for TL_Zero (γ=0), with ~39% in transitional states.
+- **Flip-flop behavior is real but narrow**: It only shows up in a ~500 μAU-wide band of orbital distance at the baseline Q=22, (B−A)/C=3×10⁻⁵. The width likely varies with tidal parameters. Outside that band, the planet either stays permanently locked or spins freely.
+- **Mean motion drives the transitions**: Secular perturbations from neighboring planets produce sufficient variations in the mean motion n(t) to overcome tidal restoring torque — this forcing term matters more than eccentricity variations alone.
+- **Tidal Q has sharp thresholds**: There's a sharp threshold where a small change in Q flips the system from stable lock to flip-flopping.
+- **The antistellar lock dominates**: TL_Pi (γ=π) captures ~47% of the time vs ~9% for TL_Zero (γ=0), with ~39% in transitional states. The asymmetry arises because the γ=π equilibrium has a deeper effective potential well under time-varying eccentricity.
 
-These are based on limited integration times (~1000 yr) and haven't been validated against other codes. Take them with appropriate skepticism.
+These are based on limited integration times (~1000 yr) — short relative to secular timescales like Kozai-Lidov cycles (~10⁴–10⁵ yr from the distant companion) — and haven't been validated against other codes. Longer integrations may show different regime statistics.
 
 ## Demos
 
@@ -177,7 +177,7 @@ GPL-3.0-or-later (required by REBOUND dependency). See [LICENSE](LICENSE).
 
 - Shakespeare & Steffen 2023, ApJ 959, 170 — TLSR model
 - Goldreich & Peale 1966, AJ 71, 425 — Spin-orbit coupling
-- MacDonald & Dawson 2018, AJ 156, 228 — TRAPPIST-1 migration
+- MacDonald & Dawson 2018, AJ 156, 228 — Resonance chain formation via disk migration
 - Kopparapu et al. 2013, ApJ 765, 131 — HZ boundaries
 
 ## Notes
