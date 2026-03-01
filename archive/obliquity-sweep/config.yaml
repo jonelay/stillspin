@@ -1,0 +1,62 @@
+sweep:
+  mutual_inclination_deg:  # degrees
+    min: 5
+    max: 45
+    points: 5
+    scale: linear
+  kerberos_distance_au:    # AU — gas giant perturber
+    min: 2.0
+    max: 5.0
+    points: 4
+    scale: linear
+  moon_mass:               # Earth masses
+    min: 0.01
+    max: 0.03
+    points: 5
+    scale: log
+  moon_distance:           # planetary radii
+    min: 15.0
+    max: 30.0
+    points: 5
+    scale: linear
+
+integration:
+  t_stop_yr: 10000
+  method: RK45
+  rtol: 1.0e-9
+  atol: 1.0e-12
+
+quick:                     # overrides for --quick
+  sweep:
+    mutual_inclination_deg:
+      points: 3
+    kerberos_distance_au:
+      points: 2
+    moon_mass:
+      points: 3
+    moon_distance:
+      points: 3
+  integration:
+    t_stop_yr: 1000
+
+system:                    # baseline parameters (M3V at 0.18 AU)
+  star_mass_msun: 0.36
+  star_luminosity_lsun: 0.015
+  bipolaris_distance_au: 0.18
+  bipolaris_rotation_period_hr: 28
+  bipolaris_mass_mearth: 1.0
+  bipolaris_radius_rearth: 1.0
+  kerberos_mass_msun: 0.00286  # 3 M_Jupiter in solar masses
+  kerberos_distance_au: 3.0
+  mutual_inclination_deg: 5.0
+  obliquity_initial_deg: 90.0
+  k2: 0.3
+  kf: 0.93
+
+targets:                   # narrative viability window
+  period_yr:
+    min: 3
+    max: 100
+  amplitude_deg:
+    min: 10
+    max: 30
