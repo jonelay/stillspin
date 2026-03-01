@@ -1,0 +1,43 @@
+[project]
+name = "stillspin"
+version = "0.1.0"
+description = "Spin dynamics simulations for tidally-locked exoplanets in broken resonance chains"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "scipy",
+]
+
+[project.optional-dependencies]
+rebound = ["rebound", "reboundx"]
+vplanet = ["vplanet"]
+tidalpy = ["TidalPy"]
+all = ["rebound", "reboundx", "vplanet", "TidalPy"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["shared", "tlsr_spin", "tlsr_spin.tests", "thermal_sweep", "chain_survey", "chain_survey.tests"]
+
+[tool.setuptools.package-dir]
+tlsr_spin = "tlsr-spin"
+"tlsr_spin.tests" = "tlsr-spin/tests"
+thermal_sweep = "thermal-sweep"
+chain_survey = "chain-survey"
+"chain_survey.tests" = "chain-survey/tests"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-timeout>=2.2.0",
+]
+
+[tool.pytest.ini_options]
+timeout = 300
+timeout_method = "thread"
+markers = [
+    "slow: marks tests as slow (REBOUND integration, expect >120s)",
+]
