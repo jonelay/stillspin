@@ -518,63 +518,6 @@ wheels = [
 ]
 
 [[package]]
-name = "crossover-sim-astro"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "matplotlib" },
-    { name = "numpy" },
-    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "scipy", version = "1.17.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-]
-
-[package.optional-dependencies]
-all = [
-    { name = "rebound" },
-    { name = "reboundx" },
-    { name = "tidalpy" },
-    { name = "vplanet" },
-]
-rebound = [
-    { name = "rebound" },
-    { name = "reboundx" },
-]
-tidalpy = [
-    { name = "tidalpy" },
-]
-vplanet = [
-    { name = "vplanet" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "pytest" },
-    { name = "pytest-timeout" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "matplotlib" },
-    { name = "numpy" },
-    { name = "rebound", marker = "extra == 'all'" },
-    { name = "rebound", marker = "extra == 'rebound'" },
-    { name = "reboundx", marker = "extra == 'all'" },
-    { name = "reboundx", marker = "extra == 'rebound'" },
-    { name = "scipy" },
-    { name = "tidalpy", marker = "extra == 'all'" },
-    { name = "tidalpy", marker = "extra == 'tidalpy'" },
-    { name = "vplanet", marker = "extra == 'all'" },
-    { name = "vplanet", marker = "extra == 'vplanet'" },
-]
-provides-extras = ["rebound", "vplanet", "tidalpy", "all"]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "pytest", specifier = ">=9.0.2" },
-    { name = "pytest-timeout", specifier = ">=2.2.0" },
-]
-
-[[package]]
 name = "cryptography"
 version = "46.0.4"
 source = { registry = "https://pypi.org/simple" }
@@ -2237,6 +2180,63 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/28/e3/55dcc2cfbc3ca9c29519eb6884dd1415ecb53b0e934862d3559ddcb7e20b/stack_data-0.6.3.tar.gz", hash = "sha256:836a778de4fec4dcd1dcd89ed8abff8a221f58308462e1c4aa2a3cf30148f0b9", size = 44707, upload-time = "2023-09-30T13:58:05.479Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl", hash = "sha256:d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695", size = 24521, upload-time = "2023-09-30T13:58:03.53Z" },
+]
+
+[[package]]
+name = "stillspin"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "scipy", version = "1.17.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+]
+
+[package.optional-dependencies]
+all = [
+    { name = "rebound" },
+    { name = "reboundx" },
+    { name = "tidalpy" },
+    { name = "vplanet" },
+]
+rebound = [
+    { name = "rebound" },
+    { name = "reboundx" },
+]
+tidalpy = [
+    { name = "tidalpy" },
+]
+vplanet = [
+    { name = "vplanet" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+    { name = "pytest-timeout" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "rebound", marker = "extra == 'all'" },
+    { name = "rebound", marker = "extra == 'rebound'" },
+    { name = "reboundx", marker = "extra == 'all'" },
+    { name = "reboundx", marker = "extra == 'rebound'" },
+    { name = "scipy" },
+    { name = "tidalpy", marker = "extra == 'all'" },
+    { name = "tidalpy", marker = "extra == 'tidalpy'" },
+    { name = "vplanet", marker = "extra == 'all'" },
+    { name = "vplanet", marker = "extra == 'vplanet'" },
+]
+provides-extras = ["rebound", "vplanet", "tidalpy", "all"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "pytest", specifier = ">=9.0.2" },
+    { name = "pytest-timeout", specifier = ">=2.2.0" },
 ]
 
 [[package]]
